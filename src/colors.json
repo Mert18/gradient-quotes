@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Lonely",
+    "degree": 0,
+    "colorone": "114B5F",
+    "colortwo": "028090"
+  },
+  {
+    "id": 2,
+    "name": "Alone",
+    "degree": 0,
+    "colorone": "E4FDE1",
+    "colortwo": "456990"
+  },
+  {
+    "id": 3,
+    "name": "Desperate",
+    "degree": 0,
+    "colorone": "F45B69",
+    "colortwo": "456990"
+  },
+  {
+    "id": 4,
+    "name": "Cold",
+    "degree": 45,
+    "colorone": "0f0c29",
+    "colortwo": "24243e"
+  }
+]
