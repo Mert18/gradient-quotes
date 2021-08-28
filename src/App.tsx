@@ -1,13 +1,16 @@
 import React from "react";
-import colors from "./colors.json";
+import colors from "./data/colors.json";
+import quotes from "./data/quotes.json";
 import "./App.css";
 
 const App = () => {
   const [quote, setQuote] = React.useState("");
   const [author, setAuthor] = React.useState("");
+
   const [deg, setDeg] = React.useState(0);
   const [col1, setCol1] = React.useState("B4A6AB");
   const [col2, setCol2] = React.useState("615055");
+  const [fontSize, setFontSize] = React.useState(16);
 
   const handleChange = () => {
     let randomNumber = Math.trunc(Math.random() * colors.length);
@@ -16,6 +19,11 @@ const App = () => {
     setCol2(colors[randomNumber].colortwo);
   };
 
+  const handleQuote = () => {
+    let randomNumber = Math.trunc(Math.random() * quotes.length);
+    setQuote(quotes[randomNumber].quote);
+    setAuthor(quotes[randomNumber].author);
+  };
   return (
     <div className="container">
       <div className="header">
@@ -23,16 +31,38 @@ const App = () => {
           <form className="form">
             <div className="inputgroup">
               <label htmlFor="quote">Quote</label>
-              <textarea id="quote" onChange={(e) => setQuote(e.target.value)} />
+              <textarea
+                id="quote"
+                value={quote}
+                onChange={(e) => setQuote(e.target.value)}
+              />
             </div>
             <div className="inputgroup">
               <label htmlFor="author">Author</label>
-              <input type="text" onChange={(e) => setAuthor(e.target.value)} />
+              <textarea
+                value={author}
+                id="author"
+                onChange={(e) => setAuthor(e.target.value)}
+              />
+            </div>
+            <div className="inputgroup">
+              <label htmlFor="fontsize">Font Size</label>
+              <input
+                type="number"
+                value={fontSize}
+                id="fontsize"
+                onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
+                  setFontSize(+e.target.value)
+                }
+              />
             </div>
           </form>
         </div>
         <div className="gradientcontroller">
-          <button onClick={handleChange}>Change Gradient</button>
+          <div className="gradientbuttons">
+            <button onClick={handleChange}>Change Gradient</button>
+            <button onClick={handleQuote}>Random Quote</button>
+          </div>
         </div>
       </div>
       <div className="main">
@@ -43,7 +73,9 @@ const App = () => {
           }}
         >
           <div className="quotewrapper">
-            <p className="quote">{quote}</p>
+            <p className="quote" style={{ fontSize: `${fontSize}px` }}>
+              {quote}
+            </p>
             <div className="author">
               <p>{author}</p>
             </div>
