@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import colors from "./data/colors.json";
 import quotes from "./data/quotes.json";
 import "./App.css";
 
 const App = () => {
+  const componentRef = useRef<HTMLDivElement>(null);
+
   const [quote, setQuote] = React.useState("");
   const [author, setAuthor] = React.useState("");
 
@@ -24,8 +26,14 @@ const App = () => {
     setQuote(quotes[randomNumber].quote);
     setAuthor(quotes[randomNumber].author);
   };
+
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        backgroundImage: `linear-gradient(${deg}deg,#${col1}, #${col2} )`,
+      }}
+    >
       <div className="header">
         <div className="formwrapper">
           <form className="form">
@@ -67,6 +75,7 @@ const App = () => {
       </div>
       <div className="main">
         <div
+          ref={componentRef}
           className="gradcomponent"
           style={{
             backgroundImage: `linear-gradient(${deg}deg,#${col1}, #${col2} )`,

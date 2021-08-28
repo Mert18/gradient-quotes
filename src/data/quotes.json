@@ -3,5 +3,25 @@
     "id": 1,
     "author": "Annie Dillard",
     "quote": "How we spend our days is, of course, how we spend our lives."
+  },
+  {
+    "id": 2,
+    "author": "Kevin Kruse",
+    "quote": "Life isn’t about getting and having, it’s about giving and being."
+  },
+  {
+    "id": 3,
+    "author": "Wayne Gretzky",
+    "quote": "You miss 100% of the shots you don’t take."
+  },
+  {
+    "id": 4,
+    "author": "Charles Swindoll",
+    "quote": "Life is 10% what happens to me and 90% of how I react to it."
+  },
+  {
+    "id": 5,
+    "author": "Woody Allen",
+    "quote": "Eighty percent of success is showing up."
   }
 ]

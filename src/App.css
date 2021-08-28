@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header {
@@ -7,7 +7,6 @@
   justify-content: center;
   width: 100%;
   height: 25vh;
-  background-color: rgb(248, 246, 246);
 }
 
 .formwrapper {
@@ -26,6 +25,9 @@
   flex-direction: column;
   margin: 1rem;
   width: 50%;
+}
+.inputgroup label {
+  color: white;
 }
 .inputgroup textarea {
   resize: none;
@@ -50,15 +52,16 @@
 }
 .gradientbuttons button {
   margin: 1rem;
-  background: rgb(44, 25, 22);
-  color: white;
+  color: black;
+  background: white;
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
+  font-weight: 500;
 }
 .gradientbuttons button:hover {
   cursor: pointer;
-  background: rgb(44, 38, 37);
+  background: rgb(230, 230, 230);
 }
 
 .main {
@@ -69,9 +72,8 @@
 }
 
 .gradcomponent {
-  width: 1280px;
-  height: 620px;
-  margin: 2rem;
+  width: 90%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
