@@ -1,5 +1,6 @@
 .container {
   min-height: 100vh;
+  background: #fffafa;
 }
 
 .header {
@@ -53,7 +54,7 @@
 .gradientbuttons button {
   margin: 1rem;
   color: black;
-  background: white;
+  border: 1px solid black;
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
@@ -67,6 +68,7 @@
 .main {
   min-height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -77,6 +79,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.downloads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+.downloads button {
+  padding: 0.5rem 1rem;
 }
 
 .quotewrapper {
